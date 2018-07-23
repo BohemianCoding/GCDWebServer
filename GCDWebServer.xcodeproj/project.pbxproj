@@ -873,7 +873,6 @@
 					};
 					E2DDD1C61BE698A8002CE867 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 88W3E55T4B;
 					};
 					E2DDD1F51BE69EE4002CE867 = {
 						CreatedOnToolsVersion = 7.1;
@@ -1476,6 +1475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.pol-online.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCDWebServer;
@@ -1489,6 +1489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = tvOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.pol-online.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GCDWebServer;
