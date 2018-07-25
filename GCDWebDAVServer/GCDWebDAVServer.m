@@ -570,7 +570,7 @@ static inline xmlNodePtr _XMLChildWithName(xmlNodePtr child, const xmlChar* name
     [xmlString appendFormat:@"<D:timeout>%@</D:timeout>\n", timeoutHeader];
   }
   [xmlString appendFormat:@"<D:locktoken><D:href>%@</D:href></D:locktoken>\n", token];
-  NSString* lockroot = [@"http://" stringByAppendingString:[[request.headers objectForKey:@"Host"] stringByAppendingString:[@"/" stringByAppendingString:relativePath]]];
+  NSString* lockroot = [@"http://" stringByAppendingString:[(NSString *)[request.headers objectForKey:@"Host"] stringByAppendingString:[@"/" stringByAppendingString:relativePath]]];
   [xmlString appendFormat:@"<D:lockroot><D:href>%@</D:href></D:lockroot>\n", lockroot];
   [xmlString appendString:@"</D:activelock>\n</D:lockdiscovery>\n"];
   [xmlString appendString:@"</D:prop>"];

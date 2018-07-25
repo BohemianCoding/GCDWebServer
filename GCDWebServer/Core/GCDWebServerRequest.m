@@ -219,7 +219,7 @@ NSString* const GCDWebServerRequestAttribute_RegexCaptures = @"GCDWebServerReque
       if ([rangeHeader hasPrefix:@"bytes="]) {
         NSArray* components = [[rangeHeader substringFromIndex:6] componentsSeparatedByString:@","];
         if (components.count == 1) {
-          components = [[components firstObject] componentsSeparatedByString:@"-"];
+          components = [(NSString *)[components firstObject] componentsSeparatedByString:@"-"];
           if (components.count == 2) {
             NSString* startString = [components objectAtIndex:0];
             NSInteger startValue = [startString integerValue];
@@ -243,7 +243,7 @@ NSString* const GCDWebServerRequestAttribute_RegexCaptures = @"GCDWebServerReque
       }
     }
     
-    if ([[_headers objectForKey:@"Accept-Encoding"] rangeOfString:@"gzip"].location != NSNotFound) {
+    if ([(NSString *)[_headers objectForKey:@"Accept-Encoding"] rangeOfString:@"gzip"].location != NSNotFound) {
       _gzipAccepted = YES;
     }
     
