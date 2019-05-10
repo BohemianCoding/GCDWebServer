@@ -286,6 +286,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		433A13A6228628FA00B8F8F0 /* BCCodeSigning.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = BCCodeSigning.xcconfig; path = ../BCFoundation/Configs/BCCodeSigning.xcconfig; sourceTree = "<group>"; };
 		8DD76FB20486AB0100D96B5E /* GCDWebServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GCDWebServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE28CD11AE004D800F4023C /* GCDWebServers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCDWebServers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE28CEF1AE0051F00F4023C /* GCDWebServersiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GCDWebServersiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +454,7 @@
 		08FB7794FE84155DC02AAC07 /* LittleCMS */ = {
 			isa = PBXGroup;
 			children = (
+				433A13A6228628FA00B8F8F0 /* BCCodeSigning.xcconfig */,
 				E28BAE1418F99C810095C089 /* GCDWebServer */,
 				E2A0E80718F3432600C580B1 /* GCDWebDAVServer */,
 				E2BE850618E77ECA0061360B /* GCDWebUploader */,
@@ -860,7 +862,8 @@
 				TargetAttributes = {
 					CEE28CD01AE004D800F4023C = {
 						CreatedOnToolsVersion = 6.3;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = WUGMZZ5K46;
+						ProvisioningStyle = Manual;
 					};
 					CEE28CEE1AE0051F00F4023C = {
 						CreatedOnToolsVersion = 6.3;
@@ -1308,12 +1311,10 @@
 		};
 		CEE28CE41AE004D800F4023C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433A13A6228628FA00B8F8F0 /* BCCodeSigning.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1322,7 +1323,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = GCDWebServers;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -1330,12 +1330,10 @@
 		};
 		CEE28CE51AE004D800F4023C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 433A13A6228628FA00B8F8F0 /* BCCodeSigning.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1344,7 +1342,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = GCDWebServers;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
