@@ -862,8 +862,7 @@
 				TargetAttributes = {
 					CEE28CD01AE004D800F4023C = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = WUGMZZ5K46;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					CEE28CEE1AE0051F00F4023C = {
 						CreatedOnToolsVersion = 6.3;
