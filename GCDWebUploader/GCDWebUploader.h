@@ -84,7 +84,7 @@
 /**
  *  Sets the delegate for the uploader.
  */
-@property(nonatomic, assign) id<GCDWebUploaderDelegate> delegate;
+@property(nonatomic, weak) id<GCDWebUploaderDelegate> delegate;
 
 /**
  *  Sets which files are allowed to be operated on depending on their extension.

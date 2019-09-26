@@ -86,7 +86,7 @@
 /**
  *  Sets the delegate for the server.
  */
-@property(nonatomic, assign) id<GCDWebDAVServerDelegate> delegate;
+@property(nonatomic, weak) id<GCDWebDAVServerDelegate> delegate;
 
 /**
  *  Sets which files are allowed to be operated on depending on their extension.
