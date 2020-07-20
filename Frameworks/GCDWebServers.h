@@ -25,6 +25,12 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+// This warning needs to be switched off - Sketch itself has this warning on, so when FWs try to import
+// this FW, you get build errors. Instead of fixing this third party FW we wallpaper over the cracks.
+// Even though this file has them "properly", header files that file includes don't.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wquoted-include-in-framework-header"
+
 // GCDWebServer Core
 #import <GCDWebServers/GCDWebServer.h>
 #import <GCDWebServers/GCDWebServerConnection.h>
@@ -50,3 +56,6 @@
 
 // GCDWebDAVServer
 #import <GCDWebServers/GCDWebDAVServer.h>
+
+#pragma clang diagnostic pop
+
