@@ -756,12 +756,16 @@ static inline NSUInteger _ScanHexNumber(const void* bytes, NSUInteger size) {
   return response;
 }
 
+// To avoid the warning "completion handler is never used when taking false branch"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wcompletion-handler"
 - (void)processRequest:(GCDWebServerRequest*)request completion:(GCDWebServerCompletionBlock)completion {
   GWS_LOG_DEBUG(@"Connection on socket %i processing request \"%@ %@\" with %lu bytes body", _socket, _virtualHEAD ? @"HEAD" : _request.method, _request.path, (unsigned long)_bytesRead);
   if (_handler) {
     _handler.asyncProcessBlock(request, [completion copy]);
   }
 }
+#pragma clang diagnostic pop
 
 // http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25
 // http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.26
