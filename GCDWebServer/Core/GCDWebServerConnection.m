@@ -756,21 +756,12 @@ static inline NSUInteger _ScanHexNumber(const void* bytes, NSUInteger size) {
   return response;
 }
 
-// To avoid the warning "completion handler is never used when taking false branch"
-// The reason for wrapping the pragma marks in an ifdef is that xcode 12 knows nothing about this warning.
-#ifdef __MAC_12_0
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wcompletion-handler"
-#endif
 - (void)processRequest:(GCDWebServerRequest*)request completion:(GCDWebServerCompletionBlock)completion {
   GWS_LOG_DEBUG(@"Connection on socket %i processing request \"%@ %@\" with %lu bytes body", _socket, _virtualHEAD ? @"HEAD" : _request.method, _request.path, (unsigned long)_bytesRead);
   if (_handler) {
     _handler.asyncProcessBlock(request, [completion copy]);
   }
 }
-#ifdef __MAC_12_0
-#pragma clang diagnostic pop
-#endif
 
 // http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25
 // http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.26
